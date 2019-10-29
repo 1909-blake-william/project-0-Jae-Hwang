@@ -41,6 +41,7 @@ public class AccountPrompt implements Prompt {
 		String selection = scan.nextLine();
 		
 		if (selection.toLowerCase().equals("back")) {
+			authUtil.exitAccount();
 			return MainMenuPrompt.instance;
 		}
 		
@@ -52,8 +53,10 @@ public class AccountPrompt implements Prompt {
 			accountDao.viewAccountTransactions(authUtil.getCurrentAccount().getId());
 			return AccountPrompt.instance;
 		case "3":
-			System.out.println("Remaining balance is: " + authUtil.getCurrentAccount().getBalance() + ".");
+			int returned = accountDao.closeAccount(authUtil.getCurrentAccount().getId());
+			System.out.println("Remaining balance is: " + returned + ".");
 			System.out.println("which will be returned shortly.");
+			authUtil.exitAccount();
 			return SelectAccountPrompt.instance;
 
 		default:

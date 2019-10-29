@@ -169,5 +169,4 @@ public class UserDaoSQL implements UserDao {
 		}
 		return null;
 	}
-
 }

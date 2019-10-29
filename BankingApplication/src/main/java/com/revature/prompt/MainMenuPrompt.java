@@ -48,10 +48,8 @@ public class MainMenuPrompt implements Prompt {
 
 		default:
 			System.out.println("Invalid Selection, please enter 1, 2, or 3");
-			break;
+			return HomePrompt.instance;
 		}
-
-		return null;
 	}
 
 	private MainMenuPrompt() {

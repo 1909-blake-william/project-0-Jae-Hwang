@@ -7,8 +7,6 @@ import com.revature.models.Account;
 public interface AccountDao {
 	AccountDao currentImplementation = new AccountDaoSQL();
 	
-	int getBalanceById(int account_id);
-	
 	int save(Account acc);
 	
 	int save(int acc_id);
@@ -26,4 +24,6 @@ public interface AccountDao {
 	void viewAccountTransactions(int acc_id);
 	
 	void viewAllTransactions();
+	
+	int closeAccount(int acc_id);
 }

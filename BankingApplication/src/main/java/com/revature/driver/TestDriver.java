@@ -10,6 +10,8 @@ import org.apache.log4j.Logger;
 
 import com.revature.util.ConnectionUtil;
 
+import sun.jvm.hotspot.utilities.soql.Callable;
+
 public class TestDriver {
 
 	private static Logger log = Logger.getRootLogger();
@@ -37,7 +39,18 @@ public class TestDriver {
 				System.out.println();
 			}
 			System.out.println("-----------------------------------------------------");
-
+			
+			
+			sql = "CALL deactivate_account(?, ?)";
+			CallableStatement cs = c.prepareCall(sql);
+			cs.setInt(1, 2);
+			cs.registerOutParameter(2, Types.INTEGER);
+			
+			cs.execute();
+			
+			System.out.println(cs.getInt(2));
+			
+			
 		} catch (Exception e) {
 			log.debug("connection failed");
 			e.printStackTrace();

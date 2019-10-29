@@ -48,6 +48,9 @@ public class AuthUtil {
 	public void logout() {
 		currentUser = null;
 		currentAccount = null;
-		System.out.println("Logout successful");
+	}
+	
+	public void exitAccount() {
+		currentAccount = null;
 	}
 }

@@ -5,8 +5,6 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.daos.AccountDao;
-import com.revature.daos.UserDao;
-import com.revature.models.Account;
 import com.revature.util.AuthUtil;
 
 public class DepositWithdrawPrompt implements Prompt {
@@ -15,7 +13,6 @@ public class DepositWithdrawPrompt implements Prompt {
 	
 	public static final DepositWithdrawPrompt instance = new DepositWithdrawPrompt();
 
-	private UserDao userDao = UserDao.currentImplementation;
 	private AccountDao accountDao = AccountDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 	

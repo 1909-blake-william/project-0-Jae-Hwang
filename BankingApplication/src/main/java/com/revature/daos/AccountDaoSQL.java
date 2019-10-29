@@ -12,7 +12,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import com.revature.models.Account;
-import com.revature.models.User;
 import com.revature.util.ConnectionUtil;
 
 public class AccountDaoSQL implements AccountDao {
@@ -25,12 +24,6 @@ public class AccountDaoSQL implements AccountDao {
 		int owner = rs.getInt("user_id");
 		int balance = rs.getInt("balance");
 		return new Account(id, owner, balance);
-	}
-
-	@Override
-	public int getBalanceById(int account_id) {
-
-		return 0;
 	}
 
 	@Override
@@ -114,7 +107,9 @@ public class AccountDaoSQL implements AccountDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "SELECT * FROM bank_accounts" + " WHERE user_id = ?" + " ORDER BY account_id";
+			String sql = "SELECT * FROM bank_accounts" 
+					+ " WHERE user_id = ? AND active = 1" 
+					+ " ORDER BY account_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, user_id);
 
@@ -129,27 +124,35 @@ public class AccountDaoSQL implements AccountDao {
 
 		} catch (SQLException e) {
 			log.debug("connection failed");
-			// e.printStackTrace();
+			e.printStackTrace();
 			return null;
 		}
 	}
 
 	public void findAllWithNames() {
-		log.debug("attempting to find all accounts");
+		log.trace("attempting to find all accounts");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "SELECT * FROM bank_accounts " + "LEFT JOIN bank_users USING (user_id) "
-					+ "ORDER BY account_id";
+			String sql = "SELECT * FROM bank_accounts " 
+					+ "LEFT JOIN bank_users USING (user_id) "
+					+ "ORDER BY active DESC, account_id";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
-			System.out.println("[ Account ID | Owner | Balance ]");
+			System.out.println("[ Account ID | Owner | Balance | Status]");
 			while (rs.next()) {
 				System.out.print("[ " + rs.getInt("account_id") + " | ");
 				System.out.print(rs.getString("username") + " | ");
-				System.out.println(rs.getInt("balance") + " ]");
+				System.out.print(rs.getInt("balance") + " | ");
+				
+				if (rs.getInt("active") == 1) {
+					System.out.println("Active ]");
+				} else {
+
+					System.out.println("Closed ]");
+				}
 			}
 
 		} catch (SQLException e) {
@@ -181,16 +184,16 @@ public class AccountDaoSQL implements AccountDao {
 			return 0;
 		}
 	}
-	
+
 	@Override
-	public void viewAccountTransactions (int acc_id) {
+	public void viewAccountTransactions(int acc_id) {
 		log.trace("attempting to find all transaction on this account");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "SELECT * FROM bank_accounts "
-					+ "LEFT JOIN transactions USING (account_id) "
-					+ "WHERE account_id = ?"
+			String sql = "SELECT * FROM transactions " 
+					+ "LEFT JOIN bank_accounts USING (account_id) "
+					+ "WHERE account_id = ?" 
 					+ "ORDER BY transaction_id DESC";
 
 			PreparedStatement ps = c.prepareStatement(sql);
@@ -209,22 +212,32 @@ public class AccountDaoSQL implements AccountDao {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
-	public void viewAllTransactions () {
+	public void viewAllTransactions() {
 		log.trace("attempting to find all transaction");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "SELECT * FROM bank_accounts " + "LEFT JOIN bank_users USING (user_id) "
-					+ "LEFT JOIN transactions USING (account_id) "
+			String sql = "SELECT * FROM transactions " 
+					+ "LEFT JOIN bank_accounts USING (account_id) " 
+					+ "LEFT JOIN bank_users USING (user_id) "
 					+ "ORDER BY transaction_id DESC";
 			PreparedStatement ps = c.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
-			System.out.println("[ Account ID | Owner | Amount | Running Balance ]");
+			System.out.println("[ Transaction ID | Account ID | Status | Owner | Amount | Running Balance ]");
 			while (rs.next()) {
-				System.out.print("[ " + rs.getInt("account_id") + " | ");
+				System.out.print("[ " + rs.getInt("transaction_id") + " | ");
+				System.out.print(rs.getInt("account_id") + " | ");
+				
+				if (rs.getInt("active") == 1) {
+					System.out.print("Active | ");
+				} else {
+
+					System.out.print("Closed | ");
+				}
+				
 				System.out.print(rs.getString("username") + " | ");
 				System.out.print(rs.getInt("amount") + " | ");
 				System.out.println(rs.getInt("runningbalance") + " ]");
@@ -236,4 +249,26 @@ public class AccountDaoSQL implements AccountDao {
 		}
 	}
 
+	public int closeAccount(int acc_id) {
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = "CALL deactivate_account(?, ?)";
+			CallableStatement cs = c.prepareCall(sql);
+			cs.setInt(1, acc_id);
+			cs.registerOutParameter(2, Types.INTEGER);
+			
+			cs.execute();
+			
+			int result = cs.getInt(2);
+			log.trace("balance in account: "+result);
+			return result;
+		}
+
+		catch (SQLException e) {
+			log.debug("connection failed");
+			e.printStackTrace();
+			return 0;
+		}
+	}
 }

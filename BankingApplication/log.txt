@@ -2530,3 +2530,1445 @@ Generated Id for UserName is: 8
 
 2019-10-28 20:16:01 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
 
+2019-10-28 20:34:30 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 20:34:30 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 20:34:31 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 20:34:33 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 20:34:33 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 20:34:33 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:34:33 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:34:35 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 20:34:36 TRACE LoginPrompt:33 - password: admi
+2019-10-28 20:34:36 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 20:34:36 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:34:36 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:34:37 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 20:34:37 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 20:34:37 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 20:34:37 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 20:34:37 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:34:37 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:34:39 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-28 20:34:39 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:34:39 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:34:39 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:34:39 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:34:47 DEBUG AccountDaoSQL:134 - attempting to find all accounts
+2019-10-28 20:34:47 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:34:47 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:34:47 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:34:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 20:35:25 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 20:35:25 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 20:35:27 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 20:35:27 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 20:35:27 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:35:27 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:35:30 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 20:35:32 TRACE LoginPrompt:33 - password: lett
+2019-10-28 20:35:32 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 20:35:32 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:35:32 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:35:32 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 20:35:32 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 20:35:32 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 20:35:32 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 20:35:32 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 20:35:36 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 20:35:36 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 20:35:36 TRACE AccountDaoSQL:107 - attempting to find accounts under user id = 2
+2019-10-28 20:35:36 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:35:36 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:35:36 DEBUG AccountDaoSQL:127 - connection failed
+2019-10-28 20:39:46 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 20:39:46 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 20:39:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 20:39:48 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 20:39:48 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 20:39:48 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:39:48 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 20:39:50 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 20:39:51 TRACE LoginPrompt:33 - password: lett
+2019-10-28 20:39:51 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 20:39:51 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:39:51 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:39:51 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 20:39:51 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 20:39:51 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 20:39:51 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 20:39:51 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 20:39:53 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 20:39:53 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 20:39:53 TRACE AccountDaoSQL:107 - attempting to find accounts under user id = 2
+2019-10-28 20:39:53 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:39:53 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:39:53 TRACE AccountDaoSQL:120 - adding account: 1
+2019-10-28 20:39:53 TRACE AccountDaoSQL:120 - adding account: 2
+2019-10-28 20:39:57 TRACE SelectAccountPrompt:54 - Selection: 2
+2019-10-28 20:39:57 TRACE SelectAccountPrompt:63 - Selected account: Account [id=2, user_id=2, balance=400.0]
+2019-10-28 20:39:57 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:39:57 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:39:59 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:39:59 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:40:01 TRACE DepositWithdrawPrompt:41 - Selection: 1
+2019-10-28 20:40:02 TRACE DepositWithdrawPrompt:64 - Selection: 100
+2019-10-28 20:40:02 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:40:02 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:40:02 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:02 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:05 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:40:05 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:40:06 TRACE DepositWithdrawPrompt:41 - Selection: 300
+2019-10-28 20:40:06 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:06 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:13 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:40:13 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 20:40:14 TRACE DepositWithdrawPrompt:41 - Selection: 1
+2019-10-28 20:40:15 TRACE DepositWithdrawPrompt:64 - Selection: 300
+2019-10-28 20:40:15 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:40:15 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:40:15 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:15 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:31 TRACE AccountDaoSQL:183 - attempting to find all transaction on this account
+2019-10-28 20:40:31 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 20:40:31 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 20:40:31 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:31 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 20:40:46 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 20:40:46 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:07:50 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:07:50 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:07:51 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:07:51 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:07:52 DEBUG TestDriver:52 - connection failed
+2019-10-28 21:08:28 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:08:28 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:08:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:08:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:10:34 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:10:34 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:10:35 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:10:35 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:13:45 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:13:45 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:13:46 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:13:46 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:14:36 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:14:36 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:14:37 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:14:37 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:19:17 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:19:17 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:19:18 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:19:18 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:20:50 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:20:50 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:20:51 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:20:51 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:27:40 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:27:40 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:27:41 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:27:41 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:27:58 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:27:58 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:27:59 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:28:02 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:28:02 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:28:02 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:28:02 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:28:05 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 21:28:06 TRACE LoginPrompt:33 - password: lett
+2019-10-28 21:28:06 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:28:06 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:28:06 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:28:06 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 21:28:06 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:28:06 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 21:28:06 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:28:06 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:28:07 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:28:07 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:28:07 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:28:07 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:28:07 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:28:07 TRACE AccountDaoSQL:117 - adding account: 1
+2019-10-28 21:28:09 TRACE SelectAccountPrompt:52 - Selection: 1
+2019-10-28 21:28:09 TRACE SelectAccountPrompt:61 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:28:09 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:28:09 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:28:15 TRACE AccountDaoSQL:180 - attempting to find all transaction on this account
+2019-10-28 21:28:15 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:28:15 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:28:15 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:28:15 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:28:43 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:28:43 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:28:46 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:28:46 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:28:46 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:28:46 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:28:46 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:28:46 TRACE AccountDaoSQL:117 - adding account: 1
+2019-10-28 21:28:48 TRACE SelectAccountPrompt:52 - Selection: 2
+2019-10-28 21:28:48 TRACE SelectAccountPrompt:61 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:28:48 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:28:48 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:29:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:29:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:29:11 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:29:11 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:29:11 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:29:11 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:29:11 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:29:11 TRACE AccountDaoSQL:117 - adding account: 1
+2019-10-28 21:29:13 TRACE SelectAccountPrompt:52 - Selection: 3
+2019-10-28 21:29:13 TRACE SelectAccountPrompt:61 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:29:13 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:29:13 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:29:19 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:29:19 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:32:53 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:32:53 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:32:54 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:32:55 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:32:55 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:32:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:32:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:32:58 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 21:32:59 TRACE LoginPrompt:33 - password: lett
+2019-10-28 21:32:59 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:32:59 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:32:59 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:32:59 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 21:32:59 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:32:59 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 21:32:59 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:32:59 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:33:01 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:33:01 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:33:01 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:33:01 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:33:01 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:33:01 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:33:03 TRACE SelectAccountPrompt:52 - Selection: 2
+2019-10-28 21:33:03 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:33:03 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:33:03 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:33:03 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:33:03 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:33:03 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:42:48 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:42:48 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:42:49 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:42:50 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:42:50 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:42:50 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:42:50 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:42:51 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 21:42:53 TRACE LoginPrompt:33 - password: lett
+2019-10-28 21:42:53 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:42:53 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:42:53 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:42:53 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 21:42:53 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:42:53 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 21:42:53 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:42:53 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:42:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:42:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:42:55 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:42:55 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:42:55 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:42:55 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:42:58 TRACE SelectAccountPrompt:54 - Selection: 2
+2019-10-28 21:42:58 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:42:58 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:42:58 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:42:58 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:42:58 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:42:58 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:43:02 TRACE SelectAccountPrompt:54 - Selection: 3
+2019-10-28 21:43:02 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:43:02 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:43:02 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:43:02 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:43:02 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:43:02 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:43:04 TRACE SelectAccountPrompt:54 - Selection: 1
+2019-10-28 21:43:04 TRACE SelectAccountPrompt:63 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:43:04 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:43:04 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:43:08 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:43:08 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:43:08 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:43:08 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:43:08 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:43:08 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:43:51 TRACE SelectAccountPrompt:54 - Selection: 1
+2019-10-28 21:43:51 TRACE SelectAccountPrompt:63 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:43:51 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:43:51 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:17 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:46:17 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:46:18 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:46:19 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:46:19 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:46:19 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:46:19 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:46:20 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-28 21:46:23 TRACE LoginPrompt:33 - password: lett
+2019-10-28 21:46:23 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:46:23 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:23 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:23 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 21:46:23 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:46:23 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 21:46:23 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:23 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:25 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:25 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:25 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:25 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:25 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:25 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:28 TRACE SelectAccountPrompt:54 - Selection: 2
+2019-10-28 21:46:28 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:28 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:28 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:28 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:28 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:28 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:29 TRACE SelectAccountPrompt:54 - Selection: 3
+2019-10-28 21:46:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:29 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:29 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:30 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:32 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:32 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:32 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:32 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:36 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:36 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:46:37 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:37 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:37 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:37 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:37 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:37 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:37 TRACE AccountDaoSQL:119 - adding account: 6
+2019-10-28 21:46:40 TRACE SelectAccountPrompt:54 - Selection: 6
+2019-10-28 21:46:40 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:40 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:40 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:40 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:40 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:40 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:40 TRACE AccountDaoSQL:119 - adding account: 6
+2019-10-28 21:46:42 TRACE SelectAccountPrompt:54 - Selection: 3
+2019-10-28 21:46:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:42 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:42 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:42 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:42 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:42 TRACE AccountDaoSQL:119 - adding account: 6
+2019-10-28 21:46:42 TRACE SelectAccountPrompt:54 - Selection: 2
+2019-10-28 21:46:42 TRACE SelectAccountPrompt:63 - Selected account: Account [id=6, user_id=2, balance=0.0]
+2019-10-28 21:46:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:45 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:45 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:45 TRACE AccountDaoSQL:248 - balance in account: 0
+2019-10-28 21:46:45 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:45 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:45 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:45 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:45 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:45 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-28 21:46:56 TRACE SelectAccountPrompt:54 - Selection: 1
+2019-10-28 21:46:56 TRACE SelectAccountPrompt:63 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-28 21:46:56 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:56 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:46:57 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:57 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:46:57 TRACE AccountDaoSQL:248 - balance in account: 300
+2019-10-28 21:46:57 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:57 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:46:57 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:46:57 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:46:57 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:47:00 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:00 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:00 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:47:00 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:47:00 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:47:02 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:47:02 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:47:04 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:04 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:04 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:47:04 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:47:04 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:47:10 TRACE SelectAccountPrompt:54 - Selection: 3
+2019-10-28 21:47:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:47:10 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:47:10 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:47:10 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:47:15 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:47:15 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:48:46 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:48:46 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:48:46 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-28 21:48:46 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:48:46 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:49:52 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:49:52 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:49:53 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:49:53 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:50:00 TRACE HomePrompt:27 - Selected: Admin
+2019-10-28 21:50:00 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:50:00 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:50:05 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:50:05 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:50:05 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:50:05 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:50:06 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 21:50:07 TRACE LoginPrompt:33 - password: admi
+2019-10-28 21:50:07 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:50:07 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:50:07 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:50:07 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 21:50:07 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:50:07 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 21:50:07 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 21:50:07 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:50:07 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:50:09 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 21:50:09 DEBUG AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 21:50:09 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:50:09 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:50:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:50:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:39 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:53:39 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:53:40 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:53:41 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:53:41 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:53:41 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:53:41 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:53:42 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 21:53:43 TRACE LoginPrompt:33 - password: admi
+2019-10-28 21:53:43 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:53:43 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:53:43 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:53:43 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 21:53:43 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:53:43 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 21:53:43 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 21:53:43 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:43 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:47 TRACE AdminPrompt:42 - Selection: 1
+2019-10-28 21:53:47 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-28 21:53:47 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:53:47 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:53:47 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:49 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 21:53:49 DEBUG AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 21:53:49 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:53:49 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:53:49 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:49 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:53:49 TRACE AdminPrompt:42 - Selection: 
+2019-10-28 21:53:49 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:53:49 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:53:49 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:53:49 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:53:49 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 1
+2019-10-28 21:53:49 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:53:49 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:53:49 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:53:49 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:53:56 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:53:56 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:53:56 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:53:56 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:54:10 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:54:10 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:54:10 TRACE AccountDaoSQL:255 - balance in account: 0
+2019-10-28 21:54:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:54:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:54:10 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 1
+2019-10-28 21:54:10 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:54:10 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:54:11 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:54:11 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:54:27 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:54:27 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:54:28 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:54:29 TRACE HomePrompt:27 - Selected: Admin
+2019-10-28 21:54:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:54:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:54:30 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:54:30 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:54:30 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:54:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:54:32 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 21:54:33 TRACE LoginPrompt:33 - password: admi
+2019-10-28 21:54:33 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:54:33 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:54:33 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:54:33 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 21:54:33 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:54:33 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 21:54:33 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 21:54:33 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:54:33 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:54:35 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 21:54:35 DEBUG AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 21:54:35 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:54:35 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:54:36 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:54:36 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:54:38 TRACE AdminPrompt:42 - Selection: 
+2019-10-28 21:54:38 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:54:38 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:54:38 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:54:38 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:54:38 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 1
+2019-10-28 21:54:38 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:54:38 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:54:38 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:54:38 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:54:53 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:54:53 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:55:42 TRACE HomePrompt:27 - Selected: 2
+2019-10-28 21:55:42 TRACE HomePrompt:34 - Switch: 2
+2019-10-28 21:55:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 21:55:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 21:55:45 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:55:45 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:55:46 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:55:46 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:55:46 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:55:46 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:55:50 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 21:55:50 TRACE LoginPrompt:33 - password: admi
+2019-10-28 21:55:50 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:55:50 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:55:50 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:55:50 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 21:55:50 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:55:50 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 21:55:50 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 21:55:50 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:55:50 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:55:52 TRACE AdminPrompt:42 - Selection: 
+2019-10-28 21:55:52 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:55:52 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:55:52 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:55:52 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 21:55:52 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 1
+2019-10-28 21:55:52 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:55:52 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:55:52 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:55:52 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:56:30 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:56:30 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:56:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:56:34 TRACE HomePrompt:27 - Selected: 2
+2019-10-28 21:56:34 TRACE HomePrompt:34 - Switch: 2
+2019-10-28 21:56:34 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 21:56:34 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 21:56:38 TRACE UserDaoSQL:114 - find a user by just username, not to be used for login
+2019-10-28 21:56:38 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:56:38 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:56:41 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:56:41 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:56:41 TRACE UserDaoSQL:43 - 
+
+Generated Id for UserName is: 5
+2019-10-28 21:56:41 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:56:41 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:56:43 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:56:43 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:56:47 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:56:47 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:56:47 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:56:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:56:49 TRACE LoginPrompt:29 - username: Newusa
+2019-10-28 21:56:52 TRACE LoginPrompt:33 - password: newu
+2019-10-28 21:56:52 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:56:52 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:56:52 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:56:52 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 21:56:52 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:56:52 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 21:56:52 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:56:52 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 21:56:54 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:56:54 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:56:54 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:56:54 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 21:56:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 21:56:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 21:56:56 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-28 21:56:59 TRACE DepositWithdrawPrompt:61 - Selection: 1000000000000
+2019-10-28 21:57:30 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 21:57:30 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 21:57:31 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 21:57:32 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 21:57:32 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 21:57:32 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:57:32 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 21:57:35 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 21:57:36 TRACE LoginPrompt:33 - password: admi
+2019-10-28 21:57:36 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 21:57:36 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:57:36 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:57:36 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 21:57:36 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 21:57:36 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 21:57:36 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 21:57:36 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:57:36 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:57:37 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 21:57:37 DEBUG AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 21:57:37 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 21:57:37 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 21:57:37 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:57:37 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:57:40 TRACE AdminPrompt:42 - Selection: 
+2019-10-28 21:57:40 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 21:57:40 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:02:59 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:02:59 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:03:00 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:03:01 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:03:01 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:03:01 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:03:01 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:03:04 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:03:04 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:03:04 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:03:04 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:03:04 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:03:04 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:03:04 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:03:04 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:03:04 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:03:04 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:03:04 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:03:05 TRACE AdminPrompt:42 - Selection: 1
+2019-10-28 22:03:05 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-28 22:03:05 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:03:05 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:03:05 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:03:05 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:03:10 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 22:03:10 DEBUG AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 22:03:10 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:03:10 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:03:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:03:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:24 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:06:24 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:06:24 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:06:25 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:06:25 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:06:25 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:06:25 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:06:27 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:06:29 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:06:29 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:06:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:06:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:06:29 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:06:29 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:06:29 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:06:29 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:06:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:30 TRACE AdminPrompt:42 - Selection: 1
+2019-10-28 22:06:30 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-28 22:06:30 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:06:30 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:06:30 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:32 TRACE AdminPrompt:42 - Selection: 2
+2019-10-28 22:06:32 TRACE AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 22:06:32 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:06:32 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:06:32 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:06:32 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:07:21 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:07:21 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:07:22 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:07:23 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:07:23 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:07:23 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:07:23 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:07:26 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:07:26 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:07:26 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:07:26 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:07:26 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:07:27 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:07:27 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:07:27 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:07:27 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:07:27 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:07:27 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:07:29 TRACE AdminPrompt:42 - Selection: 3
+2019-10-28 22:07:29 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-28 22:07:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:07:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:07:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:07:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:08:56 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:08:56 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:08:57 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:08:58 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:08:58 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:08:58 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:08:58 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:09:16 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:09:16 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:09:16 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:09:17 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:09:17 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:09:17 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:09:17 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:09:18 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:09:19 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:09:19 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:09:19 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:09:20 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:09:20 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:09:20 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:09:20 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:09:20 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:09:20 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:09:20 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:09:21 TRACE AdminPrompt:43 - Selection: 3
+2019-10-28 22:09:21 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-28 22:09:21 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:09:21 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:09:21 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:09:21 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:10:12 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:10:12 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:10:12 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:10:13 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:10:13 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:10:13 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:10:13 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:10:15 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:10:18 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:10:18 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:10:18 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:10:18 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:10:18 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:10:18 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:10:18 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:10:18 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:10:18 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:10:18 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:10:20 TRACE AdminPrompt:43 - Selection: 3
+2019-10-28 22:10:20 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-28 22:10:20 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:10:20 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:10:20 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:10:20 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:12:16 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:12:16 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:12:16 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:13:28 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-28 22:13:28 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-28 22:13:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:13:29 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:13:29 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:13:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:13:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:13:32 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:13:33 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:13:33 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:13:33 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:13:33 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:13:33 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:13:33 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:13:33 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:13:33 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:13:33 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:13:33 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:13:34 TRACE AdminPrompt:43 - Selection: 3
+2019-10-28 22:13:34 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-28 22:13:34 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:13:34 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:13:34 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:13:34 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:14:08 TRACE AdminPrompt:43 - Selection: back
+2019-10-28 22:14:08 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:14:08 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:14:10 TRACE HomePrompt:27 - Selected: 2
+2019-10-28 22:14:10 TRACE HomePrompt:34 - Switch: 2
+2019-10-28 22:14:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 22:14:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.RegisterPrompt
+
+2019-10-28 22:14:13 TRACE UserDaoSQL:114 - find a user by just username, not to be used for login
+2019-10-28 22:14:13 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:13 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:14 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:14 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:14 TRACE UserDaoSQL:43 - 
+
+Generated Id for UserName is: 5
+2019-10-28 22:14:14 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:14:14 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:14:16 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:17 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:17 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:17 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:20 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:20 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:21 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-28 22:14:22 TRACE DepositWithdrawPrompt:61 - Selection: 10000
+2019-10-28 22:14:22 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:22 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:22 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:22 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:26 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:26 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:26 TRACE DepositWithdrawPrompt:38 - Selection: 2
+2019-10-28 22:14:29 TRACE DepositWithdrawPrompt:61 - Selection: 300
+2019-10-28 22:14:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:32 TRACE AccountDaoSQL:190 - attempting to find all transaction on this account
+2019-10-28 22:14:32 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:32 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:32 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:32 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:42 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:42 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:42 TRACE AccountDaoSQL:264 - balance in account: 9700
+2019-10-28 22:14:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:14:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:14:42 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 5
+2019-10-28 22:14:42 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:42 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:14:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:14:53 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:54 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:54 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:54 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:14:56 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-28 22:14:57 TRACE DepositWithdrawPrompt:61 - Selection: 100
+2019-10-28 22:14:57 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:14:57 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:14:57 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:14:57 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:15:00 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:15:00 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:15:01 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:15:01 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:15:03 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:15:03 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:15:03 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:15:03 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:15:04 TRACE LoginPrompt:29 - username: Admin
+2019-10-28 22:15:05 TRACE LoginPrompt:33 - password: admi
+2019-10-28 22:15:05 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:15:05 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:15:06 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:15:06 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-28 22:15:06 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:15:06 TRACE LoginPrompt:38 - Permission: true
+2019-10-28 22:15:06 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-28 22:15:06 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:06 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:06 TRACE AdminPrompt:43 - Selection: 1
+2019-10-28 22:15:06 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-28 22:15:06 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:15:06 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:15:06 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:06 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:10 TRACE AdminPrompt:43 - Selection: 2
+2019-10-28 22:15:10 TRACE AccountDaoSQL:133 - attempting to find all accounts
+2019-10-28 22:15:10 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:15:10 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:15:10 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:10 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:17 TRACE AdminPrompt:43 - Selection: 3
+2019-10-28 22:15:17 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-28 22:15:17 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:15:17 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:15:17 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:15:17 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-28 22:16:07 TRACE AdminPrompt:43 - Selection: back
+2019-10-28 22:16:07 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:16:07 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:16:09 TRACE HomePrompt:27 - Selected: 1
+2019-10-28 22:16:09 TRACE HomePrompt:31 - Switch: 1
+2019-10-28 22:16:09 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:16:09 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-28 22:16:15 TRACE LoginPrompt:29 - username: NewUser
+2019-10-28 22:16:17 TRACE LoginPrompt:33 - password: newu
+2019-10-28 22:16:17 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-28 22:16:17 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:17 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:17 TRACE UserDaoSQL:156 - Permission: user
+2019-10-28 22:16:17 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-28 22:16:17 TRACE LoginPrompt:38 - Permission: false
+2019-10-28 22:16:17 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:17 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:21 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:21 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:21 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:21 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:23 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:16:23 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:16:25 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-28 22:16:26 TRACE DepositWithdrawPrompt:61 - Selection: 200
+2019-10-28 22:16:26 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:26 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:26 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:26 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:28 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:28 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:29 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:29 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:29 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:29 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:30 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:16:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-28 22:16:31 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-28 22:16:33 TRACE DepositWithdrawPrompt:61 - Selection: 10000
+2019-10-28 22:16:33 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:33 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:33 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:33 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:35 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:35 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:35 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:16:35 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:16:35 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 5
+2019-10-28 22:16:35 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:35 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:35 TRACE AccountDaoSQL:119 - adding account: 7
+2019-10-28 22:16:35 TRACE AccountDaoSQL:119 - adding account: 8
+2019-10-28 22:16:35 TRACE AccountDaoSQL:119 - adding account: 9
+2019-10-28 22:16:42 TRACE SelectAccountPrompt:59 - Selection: 4
+2019-10-28 22:16:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:16:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-28 22:16:42 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 5
+2019-10-28 22:16:42 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-28 22:16:42 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-28 22:16:42 TRACE AccountDaoSQL:119 - adding account: 7
+2019-10-28 22:16:42 TRACE AccountDaoSQL:119 - adding account: 8
+2019-10-28 22:16:42 TRACE AccountDaoSQL:119 - adding account: 9
+2019-10-28 22:16:43 TRACE SelectAccountPrompt:59 - Selection: 3
+2019-10-28 22:16:43 TRACE SelectAccountPrompt:68 - Selected account: Account [id=9, user_id=5, balance=10000.0]
+2019-10-28 22:16:43 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:43 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-28 22:16:47 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-28 22:16:50 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-28 22:16:50 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-29 08:38:26 TRACE ConnectionUtil:44 - Trying to connect to the DB
+2019-10-29 08:38:26 TRACE ConnectionUtil:46 - Successfully connected to the DB
+2019-10-29 08:38:27 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-29 08:38:42 TRACE HomePrompt:27 - Selected: 1
+2019-10-29 08:38:42 TRACE HomePrompt:31 - Switch: 1
+2019-10-29 08:38:42 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-29 08:38:42 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-29 08:38:46 TRACE LoginPrompt:29 - username: Lettuce
+2019-10-29 08:38:47 TRACE LoginPrompt:33 - password: lett
+2019-10-29 08:38:47 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-29 08:38:47 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:38:47 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:38:47 TRACE UserDaoSQL:156 - Permission: user
+2019-10-29 08:38:47 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-29 08:38:47 TRACE LoginPrompt:38 - Permission: false
+2019-10-29 08:38:47 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:38:47 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:38:55 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:38:55 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:38:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:38:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:38:58 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:38:58 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:38:58 TRACE AccountDaoSQL:264 - balance in account: 0
+2019-10-29 08:38:58 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-29 08:38:58 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-29 08:38:58 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-29 08:38:58 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:38:58 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:38:58 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-29 08:38:58 TRACE AccountDaoSQL:119 - adding account: 2
+2019-10-29 08:39:03 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:39:03 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:39:11 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-29 08:39:11 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.SelectAccountPrompt
+
+2019-10-29 08:39:11 TRACE AccountDaoSQL:106 - attempting to find accounts under user id = 2
+2019-10-29 08:39:11 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:39:11 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:39:11 TRACE AccountDaoSQL:119 - adding account: 1
+2019-10-29 08:39:11 TRACE AccountDaoSQL:119 - adding account: 2
+2019-10-29 08:39:21 TRACE SelectAccountPrompt:59 - Selection: 1
+2019-10-29 08:39:21 TRACE SelectAccountPrompt:68 - Selected account: Account [id=1, user_id=2, balance=300.0]
+2019-10-29 08:39:21 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:21 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:22 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-29 08:39:22 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-29 08:39:24 TRACE DepositWithdrawPrompt:38 - Selection: 1
+2019-10-29 08:39:25 TRACE DepositWithdrawPrompt:61 - Selection: 100
+2019-10-29 08:39:25 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:39:25 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:39:25 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:25 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:28 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-29 08:39:28 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.DepositWithdrawPrompt
+
+2019-10-29 08:39:29 TRACE DepositWithdrawPrompt:38 - Selection: 2
+2019-10-29 08:39:30 TRACE DepositWithdrawPrompt:61 - Selection: 100
+2019-10-29 08:39:30 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:39:30 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:39:30 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:30 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:39 TRACE AccountDaoSQL:190 - attempting to find all transaction on this account
+2019-10-29 08:39:39 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:39:39 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:39:39 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:39 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AccountPrompt
+
+2019-10-29 08:39:55 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:39:55 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.MainMenuPrompt
+
+2019-10-29 08:39:59 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-29 08:39:59 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.HomePrompt
+
+2019-10-29 08:40:17 TRACE HomePrompt:27 - Selected: 1
+2019-10-29 08:40:17 TRACE HomePrompt:31 - Switch: 1
+2019-10-29 08:40:17 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-29 08:40:17 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.LoginPrompt
+
+2019-10-29 08:40:19 TRACE LoginPrompt:29 - username: Admin
+2019-10-29 08:40:20 TRACE LoginPrompt:33 - password: admi
+2019-10-29 08:40:20 TRACE UserDaoSQL:143 - attempting to find user credentials
+2019-10-29 08:40:20 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:40:20 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:40:20 TRACE UserDaoSQL:156 - Permission: Admin
+2019-10-29 08:40:20 INFO  LoginPrompt:36 - Credential info match, logging in
+2019-10-29 08:40:20 TRACE LoginPrompt:38 - Permission: true
+2019-10-29 08:40:20 INFO  LoginPrompt:40 - Logging into Admin User
+2019-10-29 08:40:20 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:20 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:22 TRACE AdminPrompt:43 - Selection: 1
+2019-10-29 08:40:22 DEBUG UserDaoSQL:84 - attempting to find all users
+2019-10-29 08:40:22 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:40:22 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:40:22 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:22 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:23 TRACE AdminPrompt:43 - Selection: 2
+2019-10-29 08:40:23 TRACE AccountDaoSQL:133 - attempting to find all accounts
+2019-10-29 08:40:23 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:40:23 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:40:23 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:23 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:24 TRACE AdminPrompt:43 - Selection: 3
+2019-10-29 08:40:24 TRACE AccountDaoSQL:218 - attempting to find all transaction
+2019-10-29 08:40:24 TRACE ConnectionUtil:24 - Checking connection.
+2019-10-29 08:40:24 TRACE ConnectionUtil:39 - Connection successfully retrieved.
+2019-10-29 08:40:24 TRACE BankAppDriver:21 - Next Prompt: class com.revature.prompt.AdminPrompt
+
+2019-10-29 08:40:24 TRACE BankAppDriver:19 - Running Prompt: class com.revature.prompt.AdminPrompt
+

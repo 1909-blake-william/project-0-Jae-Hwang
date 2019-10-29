@@ -26,7 +26,8 @@ CREATE SEQUENCE bank_accounts_id_seq;
 CREATE TABLE bank_accounts (
     account_id INT PRIMARY KEY,
     user_id INT REFERENCES bank_users(user_id),
-    balance INT DEFAULT 0
+    balance INT DEFAULT 0,
+    active NUMBER(1, 0) DEFAULT 1
 );
 
 
@@ -35,8 +36,7 @@ CREATE TABLE transactions (
     transaction_id INT PRIMARY KEY,
     account_id INT REFERENCES bank_accounts(account_id),
     amount INT NOT NULL,
-    runningBalance INT DEFAULT 0,
-    active NUMBER(1, 0) DEFAULT 1
+    runningBalance INT DEFAULT 0
 );
 
 /*******************************************************
@@ -94,7 +94,19 @@ BEGIN
 END;
 /
 
-
+CREATE OR REPLACE PROCEDURE deactivate_account 
+(a_id IN INT,
+outbalance OUT INT)
+IS
+BEGIN
+    UPDATE bank_accounts 
+        SET active = 0
+        WHERE account_id = a_id
+        RETURNING balance INTO outbalance;
+    INSERT INTO transactions (transaction_id, account_id, amount)
+        VALUES (TRANSACTIONS_ID_SEQ.NEXTVAL, a_id, (-1 * outbalance));
+END;
+/
 /*******************************************************
 Example Data
 *******************************************************/

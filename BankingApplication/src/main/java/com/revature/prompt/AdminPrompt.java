@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 
 import com.revature.daos.AccountDao;
 import com.revature.daos.UserDao;
-import com.revature.models.Account;
 import com.revature.models.User;
 import com.revature.util.AuthUtil;
 
@@ -37,9 +36,11 @@ public class AdminPrompt implements Prompt {
 		System.out.println("\tAdmin Menu\n");
 		System.out.println("Enter 1 to view All Users");
 		System.out.println("Enter 2 to view All Accounts");
+		System.out.println("Enter 2 to view All Transactions");
 		System.out.println("Enter back to log out and return to Home");
 
 		String selection = scan.nextLine();
+		log.trace("Selection: " + selection);
 
 		if (selection.toLowerCase().equals("back")) {
 			authUtil.logout();
@@ -71,10 +72,26 @@ public class AdminPrompt implements Prompt {
 			*/
 			
 			return AdminPrompt.instance;
+			
+		case "3":
+			accountDao.viewAllTransactions();
+			
+			/*  Changed to findAllWithNames
+			
+			List<Account> accounts = accountDao.findAll();
+			System.out.println("Account ID\t| Owner ID\t| Balance");
+			accounts.forEach( account -> {
+				System.out.print(account.getId() + "  \t| ");
+				System.out.print(account.getUserId() + "  \t| ");
+				System.out.println(account.getBalance() );
+			});
+			*/
+			
+			return AdminPrompt.instance;
 
 		default:
-			System.out.println("Invalid Selection, please Enter 1, 2, or 3.\n");
-			return AccountPrompt.instance;
+			System.out.println("Invalid Selection, please Enter 1, 2, 3, or back.\n");
+			return AdminPrompt.instance;
 		}
 
 	}
