@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.daos.AccountDao;
 import com.revature.daos.UserDao;
+import com.revature.models.Account;
 import com.revature.util.AuthUtil;
 
 public class MainMenuPrompt implements Prompt {
@@ -14,6 +16,7 @@ public class MainMenuPrompt implements Prompt {
 	public static MainMenuPrompt instance = new MainMenuPrompt();
 
 	private UserDao userDao = UserDao.currentImplementation;
+	private AccountDao accountDao = AccountDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 
 	private Scanner scan = new Scanner(System.in);
@@ -35,8 +38,10 @@ public class MainMenuPrompt implements Prompt {
 		case "1":
 			return SelectAccountPrompt.instance;
 		case "2":
-			System.out.println("Not yet implemented.");
-			return this;
+			Account newAccount = new Account(authUtil.getCurrentUser().getUserId());
+			newAccount.setId(accountDao.save(newAccount));
+			authUtil.setCurrentAccount(newAccount);
+			return AccountPrompt.instance;
 		case "3":
 			authUtil.logout();
 			return HomePrompt.instance;

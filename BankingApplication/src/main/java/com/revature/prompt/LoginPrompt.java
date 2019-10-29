@@ -33,13 +33,21 @@ public class LoginPrompt implements Prompt {
 			log.trace("password: " + password);
 			
 			if (authUtil.login(username, password) != null) {
-				log.info("Credential info match, logging in then going to Main Menu prompt");
+				log.info("Credential info match, logging in");
 				System.out.println("Succesfully logged into User : " + authUtil.getCurrentUser().getUserName()+"\n");
-				return MainMenuPrompt.instance;
+				log.trace("Permission: "+authUtil.getCurrentUser().getPermission());
+				if (authUtil.getCurrentUser().getPermission()) {
+					log.info("Logging into Admin User");
+					return AdminPrompt.instance;
+				} else {
+					return MainMenuPrompt.instance;
+				}
+				
 			} else if (loginAttempts < 3){
 				log.info("User failed to login, attempt: " + (loginAttempts+1));
 				System.out.println("Invalid Credential, please try again.\n");
 				loginAttempts++;
+				
 			} else {
 				log.info("User reached maximum login attempts, going back to home prompt");
 				System.out.println("Invalid Credential, Failed to log-in. Going back to Home.\n");

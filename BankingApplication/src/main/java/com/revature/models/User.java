@@ -8,16 +8,8 @@ public class User implements Serializable {
 	private int userId;
 	private String username;
 	private String password;
-	private HashMap<Integer, Account> userAccounts = new HashMap<>();
 	private Account currentAccount;
 	private boolean permis = false;
-
-	public void showAccounts() {
-		Set<Integer> accountIdSet = userAccounts.keySet();
-		for (int id : accountIdSet) {
-			System.out.println(id + ": " + userAccounts.get(id));
-		}
-	}
 
 	// generated methods below
 	public User() {
@@ -30,7 +22,7 @@ public class User implements Serializable {
 		this.username = username;
 		this.password = password;
 	}
-	
+
 	public User(int userId, String username, String password) {
 		super();
 		this.userId = userId;
@@ -62,14 +54,6 @@ public class User implements Serializable {
 		this.username = userName;
 	}
 
-	public HashMap<Integer, Account> getUserAccounts() {
-		return userAccounts;
-	}
-
-	public void setUserAccounts(HashMap<Integer, Account> userAccounts) {
-		this.userAccounts = userAccounts;
-	}
-
 	public Account getCurrentAccount() {
 		return currentAccount;
 	}
@@ -77,11 +61,11 @@ public class User implements Serializable {
 	public void setCurrentAccount(Account currentAccount) {
 		this.currentAccount = currentAccount;
 	}
-	
+
 	public boolean getPermission() {
 		return permis;
 	}
-	
+
 	public void setPermission(boolean permis) {
 		this.permis = permis;
 	}
@@ -90,8 +74,9 @@ public class User implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((currentAccount == null) ? 0 : currentAccount.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((userAccounts == null) ? 0 : userAccounts.hashCode());
+		result = prime * result + (permis ? 1231 : 1237);
 		result = prime * result + userId;
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
@@ -106,15 +91,17 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
+		if (currentAccount == null) {
+			if (other.currentAccount != null)
+				return false;
+		} else if (!currentAccount.equals(other.currentAccount))
+			return false;
 		if (password == null) {
 			if (other.password != null)
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (userAccounts == null) {
-			if (other.userAccounts != null)
-				return false;
-		} else if (!userAccounts.equals(other.userAccounts))
+		if (permis != other.permis)
 			return false;
 		if (userId != other.userId)
 			return false;
@@ -128,8 +115,7 @@ public class User implements Serializable {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", userAccounts="
-				+ userAccounts + ", currentAccount=" + currentAccount + "]";
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + "]";
 	}
 
 }

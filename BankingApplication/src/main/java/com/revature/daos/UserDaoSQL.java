@@ -1,9 +1,11 @@
 package com.revature.daos;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,9 +32,22 @@ public class UserDaoSQL implements UserDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
+			CallableStatement cs = c.prepareCall("CALL regist_user(?, ?, ?)");
+			cs.setString(1, u.getUserName());
+			cs.setString(2, u.getPassword());
+			
+			cs.registerOutParameter(3, Types.INTEGER);
+			cs.execute();
+			
+			int result = cs.getInt(3);
+			log.trace("\n\nGenerated Id for UserName is: " + result);
+			return result;
+			
+			/*	Changed to Stored Procedure
+			
 			String sql = "INSERT INTO bank_users (user_id, username, password)"
 					+ "VALUES (BANK_USERS_ID_SEQ.NEXTVAL, ?, ?)";
-
+			
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, u.getUserName());
 			ps.setString(2, u.getPassword());
@@ -55,6 +70,7 @@ public class UserDaoSQL implements UserDao {
 				log.debug("User not found");
 				return 0;
 			}
+			*/
 
 		} catch (SQLException e) {
 			log.debug("connection failed");
@@ -69,7 +85,7 @@ public class UserDaoSQL implements UserDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "SELECT * FROM bank_users";
+			String sql = "SELECT * FROM bank_users ORDER BY user_id";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 
@@ -107,7 +123,7 @@ public class UserDaoSQL implements UserDao {
 
 			if (rs.next()) {
 				User newUser = extractUser(rs);
-				if (rs.getString("permis").equals("admin")) {
+				if (rs.getString("permis").equals("Admin")) {
 					newUser.setPermission(true);
 				}
 				return newUser;
@@ -137,7 +153,8 @@ public class UserDaoSQL implements UserDao {
 
 			if (rs.next()) {
 				User newUser = extractUser(rs);
-				if (rs.getString("permis").equals("admin")) {
+				log.trace("Permission: " + rs.getString("permis"));
+				if (rs.getString("permis").equals("Admin")) {
 					newUser.setPermission(true);
 				}
 				return newUser;

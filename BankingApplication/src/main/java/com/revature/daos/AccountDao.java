@@ -1,18 +1,29 @@
 package com.revature.daos;
 
+import java.util.List;
+
 import com.revature.models.Account;
-import com.revature.models.User;
 
 public interface AccountDao {
-	AccountDao currentImplementation = null;
+	AccountDao currentImplementation = new AccountDaoSQL();
 	
-	int getBalance();
+	int getBalanceById(int account_id);
 	
 	int save(Account acc);
 	
-	User findById();
+	int save(int acc_id);
 	
-	User findByAccountname(String accountname);
+	Account findById(int acc_id);
+
+	List<Account> findAll();
 	
-	int Transaction(int amount);
+	List<Account> findByUserId(int user_id);
+	
+	void findAllWithNames();
+	
+	int transaction(int acc_id, int amount);
+	
+	void viewAccountTransactions(int acc_id);
+	
+	void viewAllTransactions();
 }

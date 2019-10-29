@@ -1,5 +1,6 @@
 package com.revature.util;
 
+import com.revature.daos.AccountDao;
 import com.revature.daos.UserDao;
 import com.revature.models.Account;
 import com.revature.models.User;
@@ -9,6 +10,7 @@ public class AuthUtil {
 	public static final AuthUtil instance = new AuthUtil();
 	
 	private UserDao userDao = UserDao.currentImplementation;
+	private AccountDao accountDao = AccountDao.currentImplementation;
 	private User currentUser = null;
 	private Account currentAccount = null;
 	
@@ -36,7 +38,7 @@ public class AuthUtil {
 	}
 	
 	public void setCurrentAccount(int id) {
-		currentAccount = currentUser.getUserAccounts().get(id);
+		currentAccount = accountDao.findById(id);
 	}
 	
 	public Account getCurrentAccount() {

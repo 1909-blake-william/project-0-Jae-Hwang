@@ -1,9 +1,8 @@
 package com.revature.models;
 
-import java.util.List;
-
 public class Account {
 	private int id;
+	private int user_id;
 	private double balance;
 
 	public Account() {
@@ -11,9 +10,15 @@ public class Account {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Account(int id, double balance) {
+	public Account(int user_id) {
+		super();
+		this.user_id = user_id; 
+	}
+	
+	public Account(int id, int user_id, double balance) {
 		super();
 		this.id = id;
+		this.user_id = user_id;
 		this.balance = balance;
 	}
 
@@ -23,6 +28,14 @@ public class Account {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getUserId() {
+		return user_id;
+	}
+
+	public void setUserId(int user_id) {
+		this.user_id = id;
 	}
 
 	public double getBalance() {
@@ -41,6 +54,7 @@ public class Account {
 		temp = Double.doubleToLongBits(balance);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + id;
+		result = prime * result + user_id;
 		return result;
 	}
 
@@ -57,11 +71,13 @@ public class Account {
 			return false;
 		if (id != other.id)
 			return false;
+		if (user_id != other.user_id)
+			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", balance=" + balance + "]";
+		return "Account [id=" + id + ", user_id=" + user_id + ", balance=" + balance + "]";
 	}
 }

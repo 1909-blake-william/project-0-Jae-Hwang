@@ -29,12 +29,14 @@ CREATE TABLE bank_accounts (
     balance INT DEFAULT 0
 );
 
+
 CREATE SEQUENCE transactions_id_seq;
 CREATE TABLE transactions (
     transaction_id INT PRIMARY KEY,
     account_id INT REFERENCES bank_accounts(account_id),
     amount INT NOT NULL,
-    runningBalance INT DEFAULT 0
+    runningBalance INT DEFAULT 0,
+    active NUMBER(1, 0) DEFAULT 1
 );
 
 /*******************************************************
@@ -53,7 +55,45 @@ BEGIN
     END IF;
 END;
 /
-/*******************************************************/
+
+/*******************************************************
+Stored Procedures
+*******************************************************/
+CREATE OR REPLACE PROCEDURE regist_User 
+(u_name IN varchar2,
+u_pass IN varchar2,
+generated_id OUT INT)
+IS
+BEGIN
+    INSERT INTO bank_users (user_id, username, password)
+        VALUES (BANK_USERS_ID_SEQ.NEXTVAL, u_name, u_pass)
+        RETURNING user_id INTO generated_id;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE regist_account 
+(u_id IN INT,
+generated_id OUT INT)
+IS
+BEGIN
+    INSERT INTO bank_accounts (account_id, user_id)
+        VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, u_id)
+        RETURNING account_id INTO generated_id;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE regist_transaction 
+(a_id IN INT,
+amount IN INT,
+generated_id OUT INT)
+IS
+BEGIN
+    INSERT INTO transactions (transaction_id, account_id, amount)
+        VALUES (TRANSACTIONS_ID_SEQ.NEXTVAL, a_id, amount)
+        RETURNING transaction_id INTO generated_id;
+END;
+/
+
 
 /*******************************************************
 Example Data
@@ -73,10 +113,7 @@ INSERT INTO bank_users (user_id, username, password)
 
 ---- accounts ----
 INSERT INTO bank_accounts (account_id, user_id)
-    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 1);
-
-INSERT INTO bank_accounts (account_id, user_id)
-    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 1);
+    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 2);
 
 INSERT INTO bank_accounts (account_id, user_id)
     VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 2);
@@ -85,7 +122,10 @@ INSERT INTO bank_accounts (account_id, user_id)
     VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 3);
 
 INSERT INTO bank_accounts (account_id, user_id)
-    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 3);
+    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 4);
+
+INSERT INTO bank_accounts (account_id, user_id)
+    VALUES (BANK_ACCOUNTS_ID_SEQ.NEXTVAL, 4);
 
 ---- transactions ----
 INSERT INTO transactions (transaction_id, account_id, amount)

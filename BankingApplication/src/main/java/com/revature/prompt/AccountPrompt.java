@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.daos.AccountDao;
 import com.revature.daos.UserDao;
 import com.revature.util.AuthUtil;
 
@@ -14,6 +15,7 @@ public class AccountPrompt implements Prompt {
 	public static final AccountPrompt instance = new AccountPrompt();
 
 	private UserDao userDao = UserDao.currentImplementation;
+	private AccountDao accountDao = AccountDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 	
 	private Scanner scan = new Scanner(System.in);
@@ -47,11 +49,11 @@ public class AccountPrompt implements Prompt {
 			return DepositWithdrawPrompt.instance;
 		case "2":
 			System.out.println("Account Transaction History");
+			accountDao.viewAccountTransactions(authUtil.getCurrentAccount().getId());
 			return AccountPrompt.instance;
 		case "3":
 			System.out.println("Remaining balance is: " + authUtil.getCurrentAccount().getBalance() + ".");
 			System.out.println("which will be returned shortly.");
-			authUtil.getCurrentUser().getUserAccounts().remove(authUtil.getCurrentAccount().getId());
 			return SelectAccountPrompt.instance;
 
 		default:
