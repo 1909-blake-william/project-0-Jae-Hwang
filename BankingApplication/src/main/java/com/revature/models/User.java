@@ -1,10 +1,6 @@
 package com.revature.models;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Set;
-
-public class User implements Serializable {
+public class User {
 	private int userId;
 	private String username;
 	private String password;

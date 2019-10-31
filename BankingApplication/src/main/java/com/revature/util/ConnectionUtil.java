@@ -45,6 +45,7 @@ public class ConnectionUtil {
 		try {
 			log.trace("Successfully connected to the DB");
 			this.c = connect();
+			this.c.setAutoCommit(false);
 		} catch (SQLException e) {
 			log.debug("Unable to connect the the DB");
 			e.printStackTrace();

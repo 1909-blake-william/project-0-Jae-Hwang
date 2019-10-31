@@ -5,8 +5,8 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.daos.AccountDao;
-import com.revature.daos.UserDao;
 import com.revature.util.AuthUtil;
+import com.revature.util.ClickerConnectionUtil;
 
 public class AccountPrompt implements Prompt {
 	
@@ -14,7 +14,6 @@ public class AccountPrompt implements Prompt {
 	
 	public static final AccountPrompt instance = new AccountPrompt();
 
-	private UserDao userDao = UserDao.currentImplementation;
 	private AccountDao accountDao = AccountDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 	
@@ -23,10 +22,10 @@ public class AccountPrompt implements Prompt {
 	@Override
 	public Prompt run() {
 		if (authUtil.getCurrentUser() == null) {
-			System.out.println("Oops, something went wrong.");
+			log.debug("Lost current user, going back to home.");
 			return HomePrompt.instance;
 		} else if (authUtil.getCurrentAccount() == null) {
-			System.out.println("Oops, something went wrong.");
+			System.out.println("Lost current account, going back to selecting account.");
 			return SelectAccountPrompt.instance;
 		}
 		
@@ -37,6 +36,10 @@ public class AccountPrompt implements Prompt {
 		System.out.println("Enter 2 to View Account transaction History");
 		System.out.println("Enter 3 to Remove this account");
 		System.out.println("Enter \"back\" to return to Main Menu");
+		
+		if (ClickerConnectionUtil.isStarted) {
+			System.out.println("\n ... and Potato Clicker is enabled,\nEnter 4 to START!");
+		}
 		
 		String selection = scan.nextLine();
 		
@@ -58,6 +61,12 @@ public class AccountPrompt implements Prompt {
 			System.out.println("which will be returned shortly.");
 			authUtil.exitAccount();
 			return SelectAccountPrompt.instance;
+			
+		case "4":
+			
+			if (ClickerConnectionUtil.isStarted) {
+				return StartPotatoClickerPrompt.instance;
+			}
 
 		default:
 			System.out.println("Invalid Selection, please Enter 1, 2, or 3.\n");

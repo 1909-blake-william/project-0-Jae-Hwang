@@ -11,8 +11,6 @@ public interface UserDao {
 	
 	List<User> findAll();
 	
-	User findById();
-	
 	User findByUsername(String username);
 	
 	User findByUsernameAndPassword(String username, String password);

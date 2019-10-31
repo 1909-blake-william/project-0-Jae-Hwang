@@ -14,7 +14,9 @@ public class BankAppDriver {
 	private static ConnectionUtil connectionUtil = ConnectionUtil.instance;
 	
 	public static void main(String[] args) {
+		
 		connectionUtil.setConnection();
+		
 		while (true) {
 			log.trace("Running Prompt: " + p.getClass()+"\n");
 			p = p.run();

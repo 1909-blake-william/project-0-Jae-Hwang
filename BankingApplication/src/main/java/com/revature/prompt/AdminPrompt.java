@@ -3,12 +3,14 @@ package com.revature.prompt;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import com.revature.daos.AccountDao;
 import com.revature.daos.UserDao;
 import com.revature.models.User;
 import com.revature.util.AuthUtil;
+import com.revature.util.ClickerConnectionUtil;
 
 public class AdminPrompt implements Prompt {
 
@@ -25,19 +27,21 @@ public class AdminPrompt implements Prompt {
 	@Override
 	public Prompt run() {
 		if (authUtil.getCurrentUser() == null) {
-			System.out.println("Network Error.");
+			log.debug("Lost current user, going back to home.");
 			return HomePrompt.instance;
 		} else if (!authUtil.getCurrentUser().getPermission()) {
-			System.out.println("Network Error.");
+			log.debug("Wrong user, going back to home.");
 			authUtil.logout();
 			return HomePrompt.instance;
 		}
 
-		System.out.println("\tAdmin Menu\n");
+		System.out.println("\n\tAdmin Menu\n");
 		System.out.println("Enter 1 to view All Users");
 		System.out.println("Enter 2 to view All Accounts");
-		System.out.println("Enter 2 to view All Transactions");
-		System.out.println("Enter back to log out and return to Home");
+		System.out.println("Enter 3 to view All Transactions");
+		System.out.println("Enter \"back\" to log out and return to Home");
+		System.out.println("Enter \"TRACE\" to change log level to trace");
+		System.out.println("Enter \"DEBUG\" to change log level to debug");
 
 		String selection = scan.nextLine();
 		log.trace("Selection: " + selection);
@@ -45,6 +49,16 @@ public class AdminPrompt implements Prompt {
 		if (selection.toLowerCase().equals("back")) {
 			authUtil.logout();
 			return HomePrompt.instance;
+		}
+		
+		if (selection.toLowerCase().equals("trace")) {
+			Logger.getRootLogger().setLevel(Level.TRACE);
+			return AdminPrompt.instance;
+		}
+		
+		if (selection.toLowerCase().equals("debug")) {
+			Logger.getRootLogger().setLevel(Level.DEBUG);
+			return AdminPrompt.instance;
 		}
 
 		switch (selection) {
@@ -88,7 +102,21 @@ public class AdminPrompt implements Prompt {
 			*/
 			
 			return AdminPrompt.instance;
+			
+		case "4":
+			System.out.println("   *  o                                      *");
+			System.out.println("*   )  *  o                            o  * (     o");
+			System.out.println(" \\ (   )  -~*                         *~ (   ) o ");
+			System.out.println("o ) \\ ( /                               ) \\ ( /");
+			System.out.println("   _____                                _____");
+			System.out.println("   \\* *|                                |* */");
+			System.out.println("    \\* |                                | */");
+			System.out.println("     \\*|    Potato Clicker ENABLED.     |*/");
+			System.out.println("      \\|                                |/\n");
 
+			ClickerConnectionUtil.start();
+			return HomePrompt.instance;
+			
 		default:
 			System.out.println("Invalid Selection, please Enter 1, 2, 3, or back.\n");
 			return AdminPrompt.instance;

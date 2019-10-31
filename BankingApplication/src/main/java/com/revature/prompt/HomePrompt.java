@@ -4,17 +4,11 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.revature.daos.UserDao;
-import com.revature.util.AuthUtil;
-
 public class HomePrompt implements Prompt{
 	
 	private static Logger log = Logger.getRootLogger();
 	
 	public static final HomePrompt instance = new HomePrompt();
-
-	private UserDao userDao = UserDao.currentImplementation;
-	private AuthUtil authUtil = AuthUtil.instance;
 	
 	private Scanner scan = new Scanner(System.in);
 	

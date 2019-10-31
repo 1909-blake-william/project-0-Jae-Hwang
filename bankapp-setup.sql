@@ -175,7 +175,7 @@ INSERT INTO transactions (transaction_id, account_id, amount)
 
 commit;
 
-/**  Example Queries**/
+/**  Example Queries  **/
 /************************************************************************************************
 SELECT * FROM bank_users;
 
@@ -187,3 +187,59 @@ SELECT * FROM bank_users
     INNER JOIN bank_accounts ON bank_users.user_id = bank_accounts.user_id
     INNER JOIN transactions ON bank_accounts.account_id = transactions.account;
 ************************************************************************************************/
+
+
+/**  EXTRA Potato Clicker stuffs  **/
+/************************************************************************************************/
+CREATE TABLE potato_users (
+    user_id INT REFERENCES bank_users(user_id) UNIQUE,
+    balance NUMBER DEFAULT 0,
+    upgrades INT DEFAULT 1
+);
+
+CREATE SEQUENCE potato_transactions_id_seq;
+CREATE TABLE potato_transactions (
+    pot_tr_id INT PRIMARY KEY,
+    user_id INT REFERENCES potato_users(user_id),
+    amount NUMBER NOT NULL,
+    type INT NOT NULL
+);
+
+CREATE OR REPLACE TRIGGER update_pot_bal
+BEFORE INSERT ON potato_transactions
+FOR EACH ROW
+BEGIN
+    IF INSERTING THEN
+        UPDATE potato_users 
+            SET balance = (balance + :new.amount)
+            WHERE :new.user_id = potato_users.user_id;
+    END IF;
+END;
+/
+
+/**  POTATO CLICKER DATA  **/
+-- potato users --
+INSERT INTO potato_users (user_id)
+    VALUES (2);
+
+-- potato transactions --
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 5, 1);
+    
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 5, 1);
+
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 5, 1);
+
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 1, 2);
+
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 1, 2);
+
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 1, 2);
+
+INSERT INTO potato_transactions (pot_tr_id, user_id, amount, type)
+    VALUES (potato_transactions_id_seq.NEXTVAL, 2, 1, 2);

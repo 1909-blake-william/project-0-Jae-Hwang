@@ -39,12 +39,22 @@ public class AccountDaoSQL implements AccountDao {
 			cs.execute();
 
 			int result = cs.getInt(2);
-			System.out.println("\n\nGenerated Id for account is: " + result);
+			log.trace("Generated Id: " + result);
+			
+			c.commit();
 			return result;
 
 		} catch (SQLException e) {
-			log.debug("connection failed");
-			// e.printStackTrace();
+			log.debug("Request Failed");
+			e.printStackTrace();
+			
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
 			return 0;
 		}
 	}
@@ -63,11 +73,21 @@ public class AccountDaoSQL implements AccountDao {
 
 			int result = cs.getInt(2);
 			System.out.println("\n\nGenerated Id for account is: " + result);
+			
+			c.commit();
 			return result;
 
 		} catch (SQLException e) {
-			log.debug("connection failed");
+			log.debug("Request Failed");
 			e.printStackTrace();
+			
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
 			return 0;
 		}
 	}
@@ -176,11 +196,21 @@ public class AccountDaoSQL implements AccountDao {
 
 			int result = cs.getInt(3);
 			System.out.println("\n\nGenerated Id for transcation is: " + result);
+			
+			c.commit();
 			return result;
 
 		} catch (SQLException e) {
-			log.debug("connection failed");
+			log.debug("Request Failed");
 			e.printStackTrace();
+			
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
 			return 0;
 		}
 	}
@@ -262,12 +292,22 @@ public class AccountDaoSQL implements AccountDao {
 			
 			int result = cs.getInt(2);
 			log.trace("balance in account: "+result);
+			
+			c.commit();
 			return result;
 		}
 
 		catch (SQLException e) {
-			log.debug("connection failed");
+			log.debug("Request Failed");
 			e.printStackTrace();
+			
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
 			return 0;
 		}
 	}

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.revature.daos.UserDao;
 import com.revature.util.AuthUtil;
 
 public class LoginPrompt implements Prompt {
@@ -13,7 +12,6 @@ public class LoginPrompt implements Prompt {
 	
 	public static LoginPrompt instance = new LoginPrompt();
 
-	private UserDao userDao = UserDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 	
 	private Scanner scan = new Scanner(System.in);
@@ -33,7 +31,7 @@ public class LoginPrompt implements Prompt {
 			log.trace("password: " + password);
 			
 			if (authUtil.login(username, password) != null) {
-				log.info("Credential info match, logging in");
+				log.trace("Credential info match, logging in");
 				System.out.println("Succesfully logged into User : " + authUtil.getCurrentUser().getUserName()+"\n");
 				log.trace("Permission: "+authUtil.getCurrentUser().getPermission());
 				if (authUtil.getCurrentUser().getPermission()) {

@@ -21,10 +21,10 @@ public class DepositWithdrawPrompt implements Prompt {
 	@Override
 	public Prompt run() {
 		if (authUtil.getCurrentUser() == null) {
-			System.out.println("Oops, something went wrong.");
+			log.debug("Lost current user, going back to home.");
 			return HomePrompt.instance;
 		} else if (authUtil.getCurrentAccount() == null) {
-			System.out.println("Oops, something went wrong.");
+			System.out.println("Lost current account, going back to selecting account.");
 			return SelectAccountPrompt.instance;
 		}
 		

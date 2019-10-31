@@ -41,6 +41,8 @@ public class UserDaoSQL implements UserDao {
 			
 			int result = cs.getInt(3);
 			log.trace("\n\nGenerated Id for UserName is: " + result);
+			
+			c.commit();
 			return result;
 			
 			/*	Changed to Stored Procedure
@@ -73,15 +75,23 @@ public class UserDaoSQL implements UserDao {
 			*/
 
 		} catch (SQLException e) {
-			log.debug("connection failed");
-			// e.printStackTrace();
+			log.debug("Request Failed");
+			e.printStackTrace();
+			
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
 			return 0;
 		}
 	}
 
 	@Override
 	public List<User> findAll() {
-		log.debug("attempting to find all users");
+		log.trace("attempting to find all users");
 		try {
 			Connection c = connectionUtil.getConnection();
 
@@ -102,11 +112,6 @@ public class UserDaoSQL implements UserDao {
 			// e.printStackTrace();
 			return null;
 		}
-	}
-
-	@Override
-	public User findById() {
-		return null;
 	}
 
 	@Override
@@ -132,7 +137,6 @@ public class UserDaoSQL implements UserDao {
 			}
 
 		} catch (Exception e) {
-
 			log.debug("connection failed");
 		}
 		return null;

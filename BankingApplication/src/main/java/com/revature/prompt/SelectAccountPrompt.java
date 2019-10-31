@@ -24,10 +24,10 @@ public class SelectAccountPrompt implements Prompt {
 	public Prompt run() {
 		// get view account then prompt user to select from that list.
 		if (authUtil.getCurrentUser() == null) {
-			System.out.println("Oops, something went wrong.");
+			log.debug("Lost current user, going back to home.");
 			return HomePrompt.instance;
 		}
-
+		
 		System.out.println("\tView and Select Account\n");
 
 		System.out.println("Accounts under " + authUtil.getCurrentUser().getUserName() + ":");

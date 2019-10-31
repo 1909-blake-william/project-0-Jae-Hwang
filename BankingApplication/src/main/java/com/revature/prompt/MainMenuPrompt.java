@@ -5,7 +5,6 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.revature.daos.AccountDao;
-import com.revature.daos.UserDao;
 import com.revature.models.Account;
 import com.revature.util.AuthUtil;
 
@@ -15,7 +14,6 @@ public class MainMenuPrompt implements Prompt {
 	
 	public static MainMenuPrompt instance = new MainMenuPrompt();
 
-	private UserDao userDao = UserDao.currentImplementation;
 	private AccountDao accountDao = AccountDao.currentImplementation;
 	private AuthUtil authUtil = AuthUtil.instance;
 
@@ -23,7 +21,7 @@ public class MainMenuPrompt implements Prompt {
 
 	public Prompt run() {
 		if (authUtil.getCurrentUser() == null) {
-			System.out.println("Oops, something went wrong.");
+			log.debug("Lost current user, going back to home.");
 			return HomePrompt.instance;
 		}
 		System.out.println("Welcome, " + authUtil.getCurrentUser().getUserName() + ".\n");
@@ -41,6 +39,7 @@ public class MainMenuPrompt implements Prompt {
 			Account newAccount = new Account(authUtil.getCurrentUser().getUserId());
 			newAccount.setId(accountDao.save(newAccount));
 			authUtil.setCurrentAccount(newAccount);
+			System.out.println("Successfully created new account.");
 			return AccountPrompt.instance;
 		case "3":
 			authUtil.logout();
